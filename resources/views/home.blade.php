@@ -9,5 +9,19 @@
     @vite('resources/js/app.js')
 </head>
 <body>
+    <div class="container pt-5">
+        <div class="row mt-5 g-3">                
+                @foreach ($movies as $movie)
+                <div class="card text-white mx-2" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$movie->title}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{$movie->date}}</h6>
+                        <p class="card-text">{{$movie->nationality}}</p>
+                        <p class="card-text">{{$movie->vote}}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
 </body>
 </html>
